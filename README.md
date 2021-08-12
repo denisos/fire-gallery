@@ -1,24 +1,23 @@
 # fire-gallery
-"Fire Gallery! Ah-ah He'll save every one of us" - name the song
+"Fire Gallery! Ah-ah He'll save every one of us" - name the song & band ;-)
 
-A web app which integrates with Google Firebase firestorage and database to upload and view images from your desktop.
+A web app which integrates with Google Firebase firestorage and database to upload images from your device and then to show all images uploaded.
 
 Users can choose images to upload and store in firebase. Users can view the images uploaded.
 
-Uses two custom hooks to integrate to Firebase to store images and links and also get the list of links for images uploaded.
+This app uses two custom hooks to integrate to Firebase to store images and links and also get the list of links for images uploaded.
 
 This was a fun learning exercise to 
 1. learn more about Firebase storage (firebase fan here, I've used since before Google bought them)
-2. learn and checkout the net ninja
-3. neat css styling for file upload and use of grid BUT not a fan of how the images are cropped! why?
-4. learn more about custom hooks
+2. learn and checkout "the net ninja"
+3. neat css styling for file upload and use of grid BUT made some changes for how the images were setup & cropped! why?
 
 Customizations I made:
-1. tests; I added (some) unit tests using react-testing library
-2. to easily test ImageGrid component I changed to pass in the images loded from json mock file to render rather than have it use the custom hook directly (dependency injection) i.e. the React "connected component" vs "pure component" separation.
+1. tests; I added unit tests using react-testing library including file upload tests which can be tricky
+2. to easily test ImageGrid component I changed from original to pass in the images loded from json mock file to render rather than have it use the custom hook directly (dependency injection) i.e. the React "connected component" vs "pure component" separation.
 3. file naming, I use .jsx for filenames with jsx in it...right?
-4. the images in the grid are cropped, why? I changed the css to not do that
-6. changed list of images in ImageGrid component to ul instead of divs (better semantic imo)
+4. the images in the grid are cropped, why? I simplified the css to not crop unless necessary. I'm using css "object-fit" property with cover value (maintain aspect ratio while filling content box)
+5. changed the html of images in ImageGrid component to just be a div containing img elements (instead of imgs wrapped in a div which is unnecessary) 
 
 Built following along a tutorial by the net ninja [see here](https://github.com/iamshaunjp/firegram/tree/starter-files)
 

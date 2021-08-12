@@ -5,6 +5,6 @@ test('should render title', () => {
   render(<Title />);
 
   // should have title
-  const titleText = screen.getByText(/our Pictures/i);
+  const titleText = screen.getByText(/Your Pictures/i);
   expect(titleText).toBeInTheDocument();
 });

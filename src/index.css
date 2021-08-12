@@ -15,22 +15,22 @@ body{
   max-width: 960px;
   margin: 0 auto;
 }
-.title h1{
+.title h1 {
   color: var(--primary);
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
 }
-.title h2, .title p{
+.title h2, .title p {
   text-align: center;
 }
-.title h2{
+.title h2 {
   margin-top: 60px;
   font-size: 2.6rem;
 }
 
 /* upload form styles */
-form{
+form {
   margin: 30px auto 10px;
   text-align: center;
 }
@@ -39,7 +39,7 @@ label input {
   width: 0;
   opacity: 0;
 }
-label{
+label {
   display: block;
   width: 30px;
   height: 30px;
@@ -51,15 +51,15 @@ label{
   font-weight: bold;
   font-size: 24px;
 }
-label:hover{
+label:hover {
   background: var(--primary);
   color: white;
 }
-.output{
+.output {
   height: 60px;
   font-size: 0.8rem;
 }
-.error{
+.error {
   color: var(--error);
 }
 
@@ -71,28 +71,17 @@ label:hover{
 }
 
 /* image grid styles */
-.img-grid{
-  margin: 20px auto;
+.img-grid {
+  margin: 0 auto 0px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
-  list-style-type: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 325px 325px 325px;
+  grid-gap: 25px;
 }
-.img-wrap{
-  overflow: hidden;
-  height: 0;
-  padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
-  position: relative;
-  opacity: 0.8;
-}
-.img-wrap img{
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 150%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.img-grid img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
 }
 
 /* modal styles */

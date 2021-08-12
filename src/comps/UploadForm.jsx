@@ -15,7 +15,7 @@ const UploadForm = () => {
     // if there is a file and it's an allowed type then set it
     // else error
     if (selected && allowedTypes.includes(selected.type)) {
-      console.log(selected);
+      // console.log(selected);
       setFile(selected);
     } else {
       setFile(null);
@@ -26,7 +26,7 @@ const UploadForm = () => {
   return (
     <form>
       <label>
-        <input type="file" onChange={changeHandler} />
+        <input type="file" data-testid="file-upload" onChange={changeHandler} />
         <span>+</span>
       </label>
 
